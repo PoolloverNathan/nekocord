@@ -1,0 +1,65 @@
+{
+  "nodes": {
+    "nekocord-installer": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-/89LCtysKgmDN8jGR2lARC7eArnxrENAdiMCSuPZVo0=",
+        "type": "file",
+        "url": "https://nekocord.dev/uploads/nekocord-installer/main/latest.json"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://nekocord.dev/uploads/nekocord-installer/main/latest.json"
+      }
+    },
+    "nekocord-latest": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-VBS6WZWFkQ43h6fvTTZuJzrnKPnk8YorRoaTjDp5ZZw=",
+        "type": "file",
+        "url": "https://nekocord.dev/uploads/nekocord/main/latest.json"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://nekocord.dev/uploads/nekocord/main/latest.json"
+      }
+    },
+    "nekocord-latest-dev": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-v9BvgZ6VOPhCdXP7CJ6NkFh0z0bvRCZzdiJDHK7IXT0=",
+        "type": "file",
+        "url": "https://nekocord.dev/uploads/nekocord/dev/latest.json"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://nekocord.dev/uploads/nekocord/dev/latest.json"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1730157240,
+        "narHash": "sha256-P8wF4ag6Srmpb/gwskYpnIsnspbjZlRvu47iN527ABQ=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "75e28c029ef2605f9841e0baa335d70065fe7ae2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nekocord-installer": "nekocord-installer",
+        "nekocord-latest": "nekocord-latest",
+        "nekocord-latest-dev": "nekocord-latest-dev",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

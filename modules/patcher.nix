@@ -47,18 +47,26 @@ with config.install;
         let
           binaryName = "Discord";
         in
-        base.overrideAttrs {
-          postInstall = ''
-            mv $out/opt/${binaryName}/resources/app.asar $out/opt/${binaryName}/resources/_app.asar
-            cp ${config.version.content}/app.asar $out/opt/${binaryName}/resources/app.asar
-            ${optionalString (renameBinary != null) # bash
-              ''
-                rm $out/bin/Discord
-                mv $out/bin/discord $out/bin/${escapeShellArg renameBinary}
-              ''
-            }
-          '';
-        };
+        base.overrideAttrs (
+          super:
+          {
+            postInstall = ''
+              mv $out/opt/${binaryName}/resources/app.asar $out/opt/${binaryName}/resources/_app.asar
+              cp ${config.version.content}/app.asar $out/opt/${binaryName}/resources/app.asar
+              ${optionalString (renameBinary != null) # bash
+                ''
+                  rm $out/bin/Discord
+                  mv $out/bin/discord $out/bin/${escapeShellArg renameBinary}
+                ''
+              }
+            '';
+          }
+          // optionalAttrs (renameBinary != null) {
+            meta = super.meta or { } // {
+              mainProgram = renameBinary;
+            };
+          }
+        );
     };
   };
 }

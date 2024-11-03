@@ -3,6 +3,9 @@
   nekocord ? builtins.getFlake "${builtins.getEnv "PWD"}",
 }:
 nekocord.lib.patch pkgs {
+  install.vencord = true;
+  install.openasar = true;
+  install.renameAsar = "vencord.asar";
   install.renameBinary = true;
   install.openasar = true;
   version = {

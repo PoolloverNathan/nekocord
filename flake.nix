@@ -61,6 +61,22 @@
         patch = pkgs: module: (patch' pkgs [ ] [ module ]).config;
       };
       nekocordModules = import ./modules;
+      homeManagerModules.nekocord =
+        {
+          config,
+          pkgs,
+          lib,
+          ...
+        }:
+        {
+          options.programs.nekocord = lib.types.submodule {
+            imports = builtins.attrValues nekocordModules;
+            config.enable = lib.mkEnableOption "Nekocord";
+          };
+          config.home.packages = lib.optional (config.programs.nekocord.enable) [
+            (lib.patch pkgs (lib.removeAttrs config.programs.nekocord [ "enable" ]))
+          ];
+        };
       formatter = nixpkgs.lib.mapAttrs (system: pkgs: pkgs.nixfmt-rfc-style) nixpkgs.legacyPackages;
       packages = nixpkgs.lib.mapAttrs (system: pkgs: {
         default = lib.fetchBuild {

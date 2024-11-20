@@ -4,8 +4,9 @@
 }:
 nekocord.lib.patch pkgs {
   install.renameBinary = true;
+  install.openasar = true;
   version = {
-    buildId = 291;
-    hash = "sha256:lEOWaIGAQlWdno/bybtY/BB2Frt7XZDS1TRw3e3DruI=";
+    buildId = 330;
+    hash = "sha256-YtIkeKEdKiW4y/Sdzn61NCMJ/6w5ghAPzqF6A9dU77M=";
   };
 }

@@ -65,12 +65,12 @@
       packages = nixpkgs.lib.mapAttrs (system: pkgs: {
         default = lib.fetchBuild {
           inherit system;
-          hash = "sha256-YtIkeKEdKiW4y/Sdzn61NCMJ/6w5ghAPzqF6A9dU77M=";
+          hash = "sha256-WZymc95RzKod4PoFp0mw+nfZRfzCovKLePMKcFJ6zrQ=";
         };
         dev = lib.fetchBuild {
           inherit system;
           version.branch = "dev";
-          hash = "sha256-M92Htlq+OZR+brJs48fx1bKUuCDRvYtqNwHFfWFZjxk=";
+          hash = "sha256-kRjZs1m7hGobBQ2xBzDJKVSRRTUelNIdOkm0m8VeSX0=";
         };
         installer = lib.fetchBuild {
           inherit system;

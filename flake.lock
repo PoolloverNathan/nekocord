@@ -15,7 +15,7 @@
     "nekocord-latest": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-es3YiV7PVLg2SO02gosVWfMXKT5FD511ZIxUrlCmdHI=",
+        "narHash": "sha256-mhdKEa3IesOeDvM/O9emhapfPzSB4joxLrZrMf4PA9Y=",
         "type": "file",
         "url": "https://nekocord.dev/uploads/nekocord/main/latest.json"
       },
@@ -27,7 +27,7 @@
     "nekocord-latest-dev": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-f1560K4Ip11G7AEZ5nBg1X1lixAkT07pGSP9c13OhSo=",
+        "narHash": "sha256-ovHRfdBzF4o12v/Th7UHAtc0yritTt1QKIThTiEO4Ns=",
         "type": "file",
         "url": "https://nekocord.dev/uploads/nekocord/dev/latest.json"
       },
@@ -38,11 +38,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1732074992,
-        "narHash": "sha256-HxcMSQ0SRjKFyf0vTUuoFbmrZSHPMWwppeAGZ+LS4vE=",
+        "lastModified": 1733226912,
+        "narHash": "sha256-62qhOkrk4ONUfc1rNwqsVMkXgY3AF8QINWT3h8w/Sk0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5a27cc051d111db0b33537d80cc2f8b8d2e687f2",
+        "rev": "442b6ae19d90c7f3aba5e25bf3ac569e2e67af59",
         "type": "github"
       },
       "original": {
